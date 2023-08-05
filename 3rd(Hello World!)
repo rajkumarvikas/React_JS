@@ -1,0 +1,25 @@
+//Save below code App.js name
+import './App.css'
+import User from './User';
+function App() {
+  return (
+    <div className="App">
+      <h1>Hello</h1>
+      <User/>
+    </div>
+  );
+}
+export default App;
+
+
+//Save below code User.js name
+
+function User() {
+  return (
+    <h1>Hello</h1>
+  )
+}
+export default user;
+
+// Local :  http://localhost:5173/
+// Network : http://172.31.196.11:5173/
