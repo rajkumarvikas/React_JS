@@ -5,7 +5,7 @@ Programming Language for(BCA/CS/IT)
     DSA  Using  C++
     JAVA  ( Basic Concept of C++ , Core of Java , Graphics , Swing , JDBC , GUI Project )
     Python
-Scripting  Language for (BCA/SC/IT)
+Scripting  Language for (BCA/CS/IT)
     HTML
     CSS	
     JavaScript
