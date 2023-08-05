@@ -1,0 +1,10 @@
+import './App.css' // it is used to inport the css file
+function App() {
+  return (
+    <div className="App">
+    <h1>Hello World!</h1>
+      <button>Click</button>
+    </div>
+  );
+}
+export default App; 
