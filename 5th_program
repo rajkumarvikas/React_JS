@@ -1,0 +1,26 @@
+//App.jsx
+import './App.css';
+import User from './User';
+function App()
+{
+  return(
+    <div className="App">
+    <h1>Hellow form</h1>
+      <User/>
+    </div>
+  );
+}
+export default App;
+
+//User.jsx
+
+import React,{Component} from 'react'
+export default class User extends Component
+  {
+    render()
+    {
+      return(
+        <h1>Hello</h1>
+      )
+    }
+  }
