@@ -25,3 +25,35 @@ class  User extends Component
     }
   }
 export default App;
+
+or
+
+
+import './App.css';
+import React,{Component} from 'react'
+function App()
+{
+  function Apple()
+    {
+      return(<div>Hello apple</div>)
+    }
+  return(
+    <div className="App">
+    <h1>Hellow form</h1>
+      <User/>
+      <Apple/> 
+    </div>
+  );
+}
+
+class  User extends Component
+  {
+    render()
+    {
+      return(
+        <h1>Hello</h1>
+      )
+    }
+  }
+export default App;
+
