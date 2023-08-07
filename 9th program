@@ -1,0 +1,74 @@
+import './App.css';
+import React,{Component} from 'react'
+function App()
+{
+  let a="vikas"
+  function Apple()
+    {
+      a="kumar"
+      alert(a)
+    }
+  return(
+    <div className="App">
+    <h1>{a}</h1>
+      {/* <User/> */}
+<button onClick={Apple}>Click me</button>
+    </div>
+  );
+}
+
+class  User extends Component
+  {
+    render()
+    {
+      return(
+        <h1>Hello</h1>
+      )
+    }
+  }
+export default App;
+
+
+
+or
+
+
+import './App.css';
+import {useState} from 'react'
+function App()
+{
+  const [a , setData]=useState("vikas")
+  function Apple()
+    {
+      setData("kumar")
+    }
+  return(
+    <div className="App">
+    <h1>{a}</h1>
+<button onClick={Apple}>Click me</button>
+    </div>
+  );
+}
+export default App;
+
+
+
+or
+
+import './App.css';
+import {useState} from 'react'
+function App()
+{
+  const [a , setData]=useState(0)
+  function Apple()
+    {
+      setData(a+1)
+    }
+  return(
+    <div className="App">
+    <h1>{a}</h1>
+<button onClick={Apple}>Click me</button>
+    </div>
+  );
+}
+export default App;
