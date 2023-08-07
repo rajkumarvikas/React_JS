@@ -1,0 +1,61 @@
+import './App.css';
+import React,{Component} from 'react'
+function App()
+{
+  function Apple()
+    {
+      alert("Hello Vinod ")
+    }
+  return(
+    <div className="App">
+    <h1>Hellow form</h1>
+      <User/>
+      <button onClick={Apple}>Click me</button>
+    </div>
+  );
+}
+
+class  User extends Component
+  {
+    render()
+    {
+      return(
+        <h1>Hello</h1>
+      )
+    }
+  }
+export default App;
+
+
+
+or
+
+
+
+import './App.css';
+import React,{Component} from 'react'
+function App()
+{
+  function Apple()
+    {
+      alert("Hello Vinod ")
+    }
+  return(
+    <div className="App">
+    <h1>Hellow form</h1>
+      {/* <User/> */}
+<button onClick={()=>alert("Hello vikas")}>Click me</button>
+    </div>
+  );
+}
+
+class  User extends Component
+  {
+    render()
+    {
+      return(
+        <h1>Hello</h1>
+      )
+    }
+  }
+export default App;
