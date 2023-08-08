@@ -1,0 +1,37 @@
+import './App.css'
+import React from 'react'
+import Student from './Student'
+class App extends React.Component{
+  constructor()
+  {
+    super();
+    this.state={
+      name:"Vikas",
+      email:"vikas@gmail.com"
+    }
+  }
+  render()
+  {
+    return(
+      <div className="App">
+      <h1>props!</h1>
+        <Student name={this.state.name} email={this.state.email} ></Student>
+        <button onClick={()=>this.setState({name:"kumar",email:"kumar@gmail.com"})}>update</button>
+      </div>
+    );
+  }
+}
+export default App;
+
+
+
+
+function Student(props) {
+  return (
+    <div>
+      <h1>{props.name}</h1>
+      <h4>{props.email}</h4>
+    </div>
+  );
+}
+export default Student;
