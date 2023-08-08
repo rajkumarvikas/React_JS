@@ -1,0 +1,27 @@
+import React, { useState } from 'react'
+import './App.css'
+import Student from './Student'
+function App() {
+  const [name, setName] = useState("Vikas")
+  function apple() {
+    setName("Archana")
+  }
+  return (
+    <div className="App">
+      <h1>props in react</h1>
+      <Student name={name} />
+      <button onClick={apple}>Update Name</button>
+    </div>
+  );
+}
+export default App;
+
+
+function Student(props) {
+  return (
+    <div>
+      <h1> Hello {props.name}</h1>
+    </div>
+  );
+}
+export default Student;
