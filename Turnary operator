@@ -1,0 +1,15 @@
+//Ternury operation
+import './App.css'
+import React from 'react'
+function App()
+{
+  let[a,setA]=React.useState(2)
+  return(
+    <div className="App">
+      {
+        a==1?<h1>Vikas</h1>:a==2?<h1>Archana</h1>:<h1>Sudhish</h1>
+      }
+    </div>
+  )
+}
+export default App;
