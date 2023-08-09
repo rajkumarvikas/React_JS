@@ -1,0 +1,16 @@
+//To show and hide the data using tow button
+import React from 'react'
+function App()
+{
+  const[name,setName]=React.useState(false)
+  return(
+    <div className="App">
+      {
+        name?<h1>vikas</h1>:null
+      }
+    <button onClick={()=>setName(false)}>hide</button>
+      <button onClick={()=>setName(true)}>show</button>
+    </div>
+  );
+}
+export default App;
