@@ -1,0 +1,15 @@
+//Show and hide data in one button
+import {useState} from 'react'
+function App()
+{
+  const[name, setName]=useState(false)
+  return(
+    <div className="App">
+      {
+        name?<h1>Vikas</h1>:null
+      }
+      <button onClick={()=>setName(!name)}>show/hide</button>
+    </div>
+  )
+}
+export default App;
