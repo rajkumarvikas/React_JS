@@ -1,0 +1,33 @@
+//submition of form
+import './App.css'
+import {useState} from 'react'
+function App()
+{
+  const [name,setName]=useState("")
+  const [choice,setChoice]=useState("")
+  const [tnc,setTnc]=useState(false)
+  function getFormData(e)
+    {
+      alert(name,choice,tnc)
+      e.preventDefault()
+    }
+  return(
+    <div className="App">
+    <h1>login form</h1>
+      <form onSubmit={getFormData}>
+      <input type="text" placeholder="Enter name" value={name} onChange={(e)=>setName(e.target.value)}></input><br></br><br></br>
+        <select onChange={(e)=>setChoice(e.target.value)}>
+        <option>Vikas</option>
+          <option>Archana</option>
+          <option>Sudhish</option>
+          <option>Avnish</option>
+        </select><br></br><br></br>
+     <input type="checkbox" onChange={(e)=>setTnc(e.target.checked)}></input>
+        <span>please accept terms and conditions</span><br></br><br></br>
+        <button type="submit">submit</button>
+        <button type="cancel">cancel</button>
+      </form>
+    </div>
+  );
+}
+export default App;
