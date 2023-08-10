@@ -1,0 +1,41 @@
+import './App.css'
+import Student from './Student'
+import User from './User'
+function App(){
+  function getData()
+    {
+      alert("hello from app component")
+    }
+  return(
+    <div className="App">
+    <User data={getData}/>
+    <Student data={getData}/>
+    </div>
+  )
+}
+export default App;
+
+
+
+function Student(props){
+  return(
+    <div>
+    <h1>Student component</h1>
+      <button onClick={props.data}>cass app</button>
+    </div>
+  )
+}
+export default Student;
+
+
+
+
+function User (props){
+  return(
+    <div>
+    <h1>User conponent</h1>
+      <button onClick={props.data}>click for App</button>
+    </div>
+  )
+}
+export default User;
