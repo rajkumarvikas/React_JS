@@ -1,0 +1,30 @@
+import './App.css'
+import React,{useState} from 'react'
+class App extends React.Component
+  {
+    constructor()
+    {
+      super();
+      this.state={
+        a:0
+      }
+    }
+    shouldComponentUpdate(){
+      alert("Do you want to update data")
+    if(this.state.a<4)
+    {
+      return true
+    }  
+    }
+    
+     render()
+    {
+      return (
+      <div className="App">
+      <h1>{this.state.a}</h1>
+        <button onClick={()=>{this.setState({a:this.state.a+1})}}>update</button>
+      </div>
+    );
+    }
+  }
+export default App;
