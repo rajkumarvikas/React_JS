@@ -1,0 +1,25 @@
+import './App.css'
+import React,{useState} from 'react'
+function App()
+{
+  const[data,setData]=useState(10)
+  const[value,setValue]=useState(100)
+  // useEffect(()=>{
+  //  alert("called both") 
+  // })
+  useEffect(()=>{
+    alert("called for data")
+  },[data])
+  useEffect(()=>{
+    alert("called for value")
+  },[value])
+  return(
+    <div className="App">
+    <h1>Data:{data}</h1>
+    <h1>Value:{value}</h1>
+      <button onClick={()=>setData(data+1)}>updata data</button>
+      <button onClick={()=>setValue(value+1)}>updata value</button>
+    </div>
+  )
+}
+export default App;
