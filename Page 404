@@ -1,0 +1,50 @@
+import "./App.css"
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import Home from './Home'
+import About from './About'
+import Page from './Page'
+function App() {
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <Link to='/about'>|| About || </Link>
+        <Link to='/'>|| Home ||</Link>
+        <Link to='/*'>||Page ||</Link>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/*" element={<Page/>}/>
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
+}
+export default App;
+
+
+function Home() {
+  return (
+     <h1>Home page</h1>    
+  )
+}
+export default Home;
+
+
+
+function About() {
+  return (
+    <h1>About page</h1>
+  )
+}
+export default About;
+
+
+
+function Page(){
+  return(
+    <h1>Page 404</h1>
+  )
+}
+export default Page;
+
+
