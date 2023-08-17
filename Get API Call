@@ -1,0 +1,36 @@
+import './App.css'
+import React, { useEffect, useState } from 'react'
+function App() {
+  const [users, setUsers] = useState([])
+  useEffect(() => {
+    fetch("https://reqres.in/api/users/2").then((result) => {
+      result.json().then((resp) =>{
+        setUsers(resp)
+      })
+  })
+}, [])
+console.warn(users)
+return (
+  <div className="App">
+    <h1>Get Api call</h1>
+    <table border="1">
+      <tbody>
+        <tr>
+          <td>Id</td>
+          <td>First Name</td>
+          <td>Last Name</td>
+          <td>Email</td>
+        </tr>
+          {/* users.map((item, i) =>
+            <tr>
+              <td>{item.first_name}</td>
+              <td>{item.last_name}</td>
+              <td>{item.email}</td>
+            </tr> 
+          ) */}
+      </tbody>
+    </table>
+  </div>
+);
+}
+export default App;
